@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    font-size: 62.5%;
+    font-family: "Roboto", sans-serif;
+}
+body {
+    background-color: #26a2db; 
+    font-family: "Roboto", sans-serif;
+}
+header {
+    background-color: #114E8B;
+} 
+nav {
+    display: flex;
+    justify-content: center;
+    column-gap: 50px;
+    padding: 2rem;
+}
+a {
+    text-decoration: none;
+     color: azure;
+     font-size: 30px;
+}
+h1, h2 {
+    color: azure;
+}
+
+h1 {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+.container {
+    max-width: 50rem;
+    margin: auto;
+}
+div{
+    text-align: center;
+}
+
+.times {
+    display: flex;
+    flex-direction: column;
+    
+    gap: 2rem;
+}
+
+.provas {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.tempo-do-evento {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+

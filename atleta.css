@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    font-size: 62.5%;
+    font-family: "Roboto", sans-serif;
+}
+body {
+    background-color: #26a2db; 
+    font-family: "Roboto", sans-serif;
+}
+header {
+    background-color: #114E8B;
+} 
+nav {
+    display: flex;
+    justify-content: center;
+    column-gap: 50px;
+    padding: 2rem;
+}
+a {
+    text-decoration: none;
+     color: azure;
+     font-size: 30px;
+}
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20rem;
+}
+select {
+    margin: auto;
+    border: none;
+    background-color: #114E8B;
+    color: azure;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    padding: 1rem;
+}
