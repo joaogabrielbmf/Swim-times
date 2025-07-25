@@ -36,6 +36,7 @@ h1 {
 .container {
     max-width: 50rem;
     margin: auto;
+    padding: 0 2rem;
 }
 div{
     text-align: center;

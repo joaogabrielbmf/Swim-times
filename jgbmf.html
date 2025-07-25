@@ -80,6 +80,14 @@
 
                 <h2>Piscina 25m</h2>
 
+                <div class="provas" id="costas50">
+                    <h2>50m Costas</h2>
+                    <div class="tempo-do-evento">
+                        <span>VIII TROFÉU PROF. RICARDO BARROSO LIMA</span>
+                        <span class="tempo"></span>
+                    </div>
+                </div>
+
                 <div class="provas" id="livre100"> 
                     <h2>100m Livre</h2>
                     <div class="tempo-do-evento">
@@ -104,8 +112,7 @@
 
         </div>
     </main>
-    <script>
-  // Seleciona todos os containers de prova
+   <script>
   const provas = document.querySelectorAll('.provas');
 
   provas.forEach(prova => {
@@ -113,11 +120,22 @@
     let tempoAnterior = Infinity;
 
     tempos.forEach(span => {
-      const valor = parseFloat(span.textContent.replace(',', '.'));
+      const texto = span.textContent.trim();
+      let valor = 0;
+
+      if (texto.includes(':')) {
+        const [min, sec] = texto.split(':');
+        valor = parseInt(min, 10) * 60 + parseFloat(sec.replace(',', '.'));
+      } else {
+        valor = parseFloat(texto.replace(',', '.'));
+      }
+
+      // Se o tempo atual for melhor (menor) que o anterior, fica verde
       if (valor < tempoAnterior) {
         span.style.color = 'green';
       }
-      tempoAnterior = valor;
+
+      tempoAnterior = valor; // Atualiza o tempo anterior
     });
   });
 </script>
